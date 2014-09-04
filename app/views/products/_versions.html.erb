@@ -1,0 +1,45 @@
+<div class="page-header">
+  <h3>Versions</h3>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Revert</th>
+        <th>Date</th>
+        <th>Sku</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Active</th>
+        <th>Available on</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>current version</td>
+        <td><%= @product.updated_at %></td>
+        <td><%= @product.sku %></td>
+        <td><%= @product.name %></td>
+        <td><%= @product.description %></td>
+        <td><%= number_to_currency(@product.price_cents / 100) unless @product.price_cents.blank? %></td>
+        <td><%= @product.active %></td>
+        <td><%= @product.available_on %></td>
+      </tr>
+      <%= content_tag_for(:tr, @product.versions) do |product_version| %>
+        <% unless product_version.reify.blank? %>
+          <td><%= link_to "restore to this version", revert_version_path(product_version), method: :post %></td>
+          <td><%= product_version.reify.updated_at %></td>
+          <td><%= product_version.reify.sku %></td>
+          <td><%= product_version.reify.name %></td>
+          <td><%= product_version.reify.description %></td>
+          <td><%= number_to_currency(product_version.reify.price_cents / 100) unless product_version.reify.price_cents.blank? %></td>
+          <td><%= product_version.reify.active %></td>
+          <td><%= product_version.reify.available_on %></td>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

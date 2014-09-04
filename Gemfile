@@ -41,8 +41,10 @@ gem 'spring',        group: :development
 
 
 gem "bootstrap-generators"
+gem 'paper_trail', '~> 3.0.5'
 gem "select2-rails"
 gem "smarter_csv"
+
 group :development do
   gem "better_errors"
 end

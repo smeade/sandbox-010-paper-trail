@@ -59,6 +59,9 @@ GEM
     mime-types (1.25.1)
     minitest (5.4.1)
     multi_json (1.10.1)
+    paper_trail (3.0.5)
+      activerecord (>= 3.0, < 5.0)
+      activesupport (>= 3.0, < 5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -132,6 +135,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  paper_trail (~> 3.0.5)
   pg
   rails (= 4.1.1)
   rails_12factor
