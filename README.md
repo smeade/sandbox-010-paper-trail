@@ -1,6 +1,8 @@
 ## Readme
 
-An application to experiment with the PaperTrail gem for versioning.
+An application to experiment with the [PaperTrail gem](https://github.com/airblade/paper_trail) for versioning.
+
+"PaperTrail lets you track changes to your models' data. It's good for auditing or versioning. You can see how a model looked at any stage in its lifecycle, revert it to any version, and even undelete it after it's been destroyed."
 
 Demo Heroku app is [here](http://sandbox-010-paper-trail.herokuapp.com/).
 
